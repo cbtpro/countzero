@@ -1,0 +1,2 @@
+${AnsiColor.YELLOW}Application: ${application.title}${AnsiColor.DEFAULT}
+${AnsiColor.GREEN}Powered by ${spring-boot.formatted-version}${AnsiColor.DEFAULT}

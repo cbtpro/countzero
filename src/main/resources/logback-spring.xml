@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+	<property name="USER_HOME" value="/Users/peter/Documents/countzero" />
+	<property name="TIME_FORMAT" value="%d{YYYY-MM-dd HH:mm:ss.SSS}" />
+	<property name="LOG_FORMAT" value="[%thread] %-5level %logger{36} - %msg%n" />
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${TIME_FORMAT} ${LOG_FORMAT}</pattern>
+		</encoder>
+	</appender>
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>${USER_HOME}/app.log</file>
+		<encoder>
+			<pattern>${TIME_FORMAT} ${LOG_FORMAT}</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="debug">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
