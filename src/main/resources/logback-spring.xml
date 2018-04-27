@@ -9,13 +9,14 @@
 		</encoder>
 	</appender>
 	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<!-- 日志保存位置 -->
 		<file>${USER_HOME}/app.log</file>
 		<encoder>
 			<pattern>${TIME_FORMAT} ${LOG_FORMAT}</pattern>
 		</encoder>
 	</appender>
-	
-	<root level="debug">
+	<!-- level为debug的时候会打印调试信息，暂时用application.properties中的debug=true就够了 -->
+	<root level="info">
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="FILE" />
 	</root>
